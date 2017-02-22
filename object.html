@@ -1,3 +1,26 @@
+
+<?php
+$id = $_REQUEST['id'];
+$kupac = '';
+$br_rac = '';
+if($id == 1) {
+	$kupac = 'Veliki kupac d.o.o.';
+	$usluge = array(
+		array(1, 'Najam', 4560.00, 1, 25, 1140.00, 5700.00), 
+		array(1, 'Održavanje', 200.00, 4, 25, 200.00, 1000.00),
+		array(1, 'Servis', 1500.00, 1, 25, 375.00, 18750.00)
+	);
+}
+else if ($id == 2)
+{
+	$kupac = 'Mali kupac d.o.o.';
+	$usluge = array(
+		array(1, 'Najam', 800.00, 1, 25, 200.00, 1000.00), 
+		array(1, 'Servis', 200.00, 1, 25, 50.00, 250.00)
+	);
+}
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
