@@ -1,40 +1,8 @@
-
-<?php
-//setLocale(LC_ALL, 'en_US.utf8', 'en_US');
-setLocale(LC_NUMERIC, 'hr_HR.utf8');
-setLocale(LC_MONETARY, 'hr_HR.utf8');
-$id = $_REQUEST['id'];
-$kupac = '';
-$datum_rac = '';
-$napomena = '';
-if($id == 1) {
-	$kupac = 'Veliki kupac d.o.o.';
-	$datum_rac = '31.01.2017.';
-	$stavke_rac = array(
-		array("Rbr" => 1, "Stavka" => 'Najam', "Jed_cijena" => 4560.00, "Kolicina" => 1, "PDV_stopa" => 25, "PDV_iznos" => 0, "Ukupno" => 0), 
-		array("Rbr" => 2, "Stavka" => 'Održavanje', "Jed_cijena" => 200.00, "Kolicina" => 4, "PDV_stopa" => 25, "PDV_iznos" => 0, "Ukupno" => 0),
-		array("Rbr" => 3, "Stavka" => 'Servis', "Jed_cijena" => 1500.00, "Kolicina" => 1, "PDV_stopa" => 25, "PDV_iznos" => 0, "Ukupno" => 0)
-	);
-	$napomena = 'Ovo je napomena
-	u više redova. 
-	Da vidimo kako će biti formatirana';
-}
-else if ($id == 2)
-{
-	$kupac = 'Mali kupac d.o.o.';
-	$datum_rac = '15.02.2017.';
-	$stavke_rac = array(
-		array("Rbr" => 1, "Stavka" => 'Najam', "Jed_cijena" => 800.00, "Kolicina" => 1, "PDV_stopa" => 25, "PDV_iznos" => 0, "Ukupno" => 0), 
-		array("Rbr" => 2, "Stavka" => 'Servis', "Jed_cijena" => 200.00, "Kolicina" => 1, "PDV_stopa" => 25, "PDV_iznos" => 0, "Ukupno" => 0)
-	);
-}
-?>
-
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>fakturiraj.me</title>
+		<title>Invoice-show</title>
 		<style>
 			h1, h2, h3, p, pre {
 				font-family: arial, sans-serif;
